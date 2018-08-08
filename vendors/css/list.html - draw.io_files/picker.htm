@@ -1,0 +1,326 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><script type="text/javascript">
+        (function(){(function(){function e(a){this.t={};this.tick=function(a,c,b){var d=void 0!=b?b:(new Date).getTime();this.t[a]=[d,c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(l){}};this.tick("start",null,a)}var a;if(window.performance)var d=(a=window.performance.timing)&&a.responseStart;var h=0<d?new e(d):new e;window.jstiming={Timer:e,load:h};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_","_wtsrt",
+d),b.tick("tbsd_","wtsrt_"))}try{var f=window.top!=window.self,g=window.location.href;a=null;window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c)));null==a&&window.gtbExternal&&(a=f?window.gtbExternal.frameT(g):window.gtbExternal.pageT());null==a&&window.external&&(f?a=window.external.frameT(g):(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",
+c))));a&&(window.jstiming.pt=a)}catch(k){}})();}).call(this);
+
+      </script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Pick a folder</title>
+<noscript><p><br><br>Your browser must support javascript.</p></noscript>
+<script type="text/javascript">
+        var rawConfig = {selectableMimeTypes:'[\x22application/vnd.google-apps.folder\x22]',oAuthToken:'ya29.GlsiBUOZjkQWr-ebyRv7bmcfAhk5kY4c-AeMq6SDSgqTVJiAzjlpye14h5JsHstlG-H4lHgDMyTiwS4jktXUQGPM6OIoygYyANG0hD8JRxTvBnUcb3KchTqxNgmw',hl:'en_US',ecc:false,cac:false,origin:'https://www.draw.io',uploadConfigs:'{\x22docs\x22:{\x22mechanisms\x22:[\x22XHR\x22,\x22HTML_FORM\x22],\x22det\x22:\x22Oops, you dragged more than one file! \\u003cbr\\u003e You can only upload one file. Please try again.\x22,\x22dzt\x22:\x22Drag a file here\x22,\x22dzat\x22:\x22Or, if you prefer...\x22,\x22selectLabel\x22:\x22Select a file from your computer\x22,\x22uet\x22:\x22There was an upload error.\x22,\x22url\x22:\x22/upload/resumableuploadsc\x22}}',title:'Pick a folder',tdeemi:true,thirdParty:true,du:true,tdefmo:true,ppms:true,protocol:'gadgets',endv:true,erd:false,pref:{},rpcToken:'6eczj57zv617',ftd:false,uriParams:{app:'2',clientUser:'02732395573144617191',subapp:'5'},prefetchUriQuery:{start:0,numResults:50,sort:3,desc:true,cursor:'',parent:'root',mine:2,service:'docs',type:'EVERYTHING',options:{ff:true,notInFolder:true,mimeTypes:'application/vnd.google-apps.folder'},token:'06dAeGABAAA.E6NI2AwgnBJhVonhQ1mQpA.yBvKZ_WlsTyy14rZvpQafg',version:4,app:'2',clientUser:'02732395573144617191',subapp:'5'},ecsi:true,xtoken:'AL7Jy1ywFhxEovOxUd0E3YkADujFt0Fb8Q:1513241191378',email:'ankitesh4@gmail.com',dpm:'Goodbye attachments. Hello Google Drive.',nav:'[[\x22folders\x22,null,{\x22parent\x22:\x22root\x22,\x22mimeTypes\x22:\x22application/vnd.google-apps.folder\x22,\x22selectFolder\x22:true,\x22includeFolders\x22:true}],[\x22all\x22,null,{\x22mimeTypes\x22:\x22application/vnd.google-apps.folder\x22,\x22selectFolder\x22:true,\x22includeFolders\x22:true}],[\x22recently-picked\x22]]',rupioUrl:'',rpcService:'kq51x33l060u',wcs:'picker/resources/2717341201-web_camera.swf',dppm:'With Google Drive, you never have to send another email attachment again. Just share a link to any file you store in Google Drive. That way everyone has access to the same file, same version - automatically.',hostId:'www.draw.io',relayUrl:'https://www.draw.io/favicon.ico',gpu:true,pimm:false,userId:'107085268794936855682',ianu:false,token:'06dAeGABAAA.E6NI2AwgnBJhVonhQ1mQpA.yBvKZ_WlsTyy14rZvpQafg',gdn:'Gmail',vg:'male',prefetchUriParams:{hl:'en_US',oauth_token:'ya29.GlsiBUOZjkQWr-ebyRv7bmcfAhk5kY4c-AeMq6SDSgqTVJiAzjlpye14h5JsHstlG-H4lHgDMyTiwS4jktXUQGPM6OIoygYyANG0hD8JRxTvBnUcb3KchTqxNgmw',hostId:'www.draw.io',xtoken:'AL7Jy1ywFhxEovOxUd0E3YkADujFt0Fb8Q:1513241191378'},upp:'https://lh6.googleusercontent.com/-0qTFaaBA_HI/AAAAAAAAAAI/AAAAAAAAAAA/a7sV5-JZpUE/photo.jpg',prefetchEnabled:true};
+        
+          
+          Deferred = function(prefetchXhr) {
+            this.callback_ = null;
+            this.isCallbackCalled_ = false;
+            this.prefetchXhr_ = prefetchXhr;
+          };
+
+          Deferred.prototype.addCallback = function(callback) {
+            if (this.isCallbackCalled_) {
+              callback(this.prefetchXhr_.status, this.prefetchXhr_.responseText);
+            } else {
+              this.callback_ = callback;
+            }
+          };
+
+          Deferred.prototype.callback = function() {
+            if (!!this.callback_) {
+              this.callback_(this.prefetchXhr_.status, this.prefetchXhr_.responseText);
+            }
+            this.isCallbackCalled_ = true;
+            this.callback_ = null;
+          };
+
+          var prefetchUri = "picker/pvr?hl\x3den_US\x26oauth_token\x3dya29.GlsiBUOZjkQWr-ebyRv7bmcfAhk5kY4c-AeMq6SDSgqTVJiAzjlpye14h5JsHstlG-H4lHgDMyTiwS4jktXUQGPM6OIoygYyANG0hD8JRxTvBnUcb3KchTqxNgmw\x26hostId\x3dwww.draw.io\x26xtoken\x3dAL7Jy1ywFhxEovOxUd0E3YkADujFt0Fb8Q:1513241191378";
+          var prefetchQueryData = "start\x3d0\x26numResults\x3d50\x26sort\x3d3\x26desc\x3dtrue\x26cursor\x26parent\x3droot\x26mine\x3d2\x26service\x3ddocs\x26type\x3dEVERYTHING\x26options\x3d%7B%22ff%22:true,%22notInFolder%22:true,%22mimeTypes%22:%22application/vnd.google-apps.folder%22%7D\x26token\x3d06dAeGABAAA.E6NI2AwgnBJhVonhQ1mQpA.yBvKZ_WlsTyy14rZvpQafg\x26version\x3d4\x26app\x3d2\x26clientUser\x3d02732395573144617191\x26subapp\x3d5";
+          if (window.XMLHttpRequest) {
+            var RESPONSE_READY = 4;
+            var prefetchXhr = new XMLHttpRequest();
+            rawConfig['prefetchQueryRequest'] = new Deferred(prefetchXhr);
+            prefetchXhr.onreadystatechange = function() {
+              if (prefetchXhr.readyState == RESPONSE_READY) {
+                rawConfig['prefetchQueryRequest'].callback();
+              }
+            }
+            prefetchXhr.open("POST", prefetchUri, true /* async */);
+            prefetchXhr.setRequestHeader("Content-Type",
+                "application/x-www-form-urlencoded;charset=UTF-8");
+            prefetchXhr.send(prefetchQueryData);
+          }
+        
+      </script>
+<link type="text/css" rel="stylesheet" href="picker_data/780009585-picker_v2.css">
+<style type="text/css">
+          /* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/WxrXJa0C3KdtC7lMafG4dRTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/OpXUqTo0UgQQhGj_SFdLWBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/1hZf02POANh32k2VkgEoUBTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/cDKhRaXnQTOVbaoxwdOr9xTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/K23cxWVTrIFD6DJsEVi07RTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/vSzulfKSK0LLjjfeaxcREhTbgVql8nDJpwnrE27mub0.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  src: url(//fonts.gstatic.com/s/roboto/v18/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/77FXFjRbGzN4aCrSFhlh3hJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/isZ-wbCXNKAbnjo6_TwHThJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/UX6i4JxQDm3fVTc1CPuwqhJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/jSN2CGVDbcVyCnfJfjSdfBJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/PwZc-YbIL414wB9rB1IAPRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/97uahxiqZRoncBaCEI3aWxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcCzTOQ_MqJVwkKsUn0wKzc2I.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcCzUj_cnvWIuuBMVgbX098Mw.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC0bcKLIaa1LC45dFaAfauRA.woff2) format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC2o_sUJ8uO4YLWRInS22T3Y.woff2) format('woff2');
+  unicode-range: U+0370-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC76up8jxqWt8HVA3mDhkV_0.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcCyYE0-AqJ3nfInTTiDXDjU4.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  src: url(//fonts.gstatic.com/s/roboto/v18/t6Nd4cfPRhZP44Q5QAjcC44P5ICox8Kq3LLUNMylGO4.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2212, U+2215;
+}
+
+        </style><style type="text/css">@-moz-keyframes undefined {0% {background-position: 0 0;} 100% {background-position: -20px 0;}} .Io-Fu-Xb .Xb-Yb-O, .Io-Fu-Op .Xb-Yb-O, .Io-Vk-Pl-hp-Xb .Xb-Yb-O, .Io-Op-aj .Xb-Yb-O, .rl-Pl-qb .Xb-Yb-O {-webkit-animation-name: undefined; -moz-animation-name: undefined;}</style><style type="text/css">#\:u .Vi-Ll-On-Kc {width: calc(20% - 16px);}</style><style type="text/css">#\:1i .Vi-Ll-On-Kc {width: calc(20% - 16px);}</style><style type="text/css">#\:25 .Vi-Ll-On-Kc {width: calc(20% - 16px);}</style></head>
+<body onload="init()" onunload="dispose()"><div class="picker-loadingstatusbox picker-loadingstatusbox-body"></div>
+<div id="doclist"><div class="Io-xj-Kc Io-Kp-rl jj-bj-td" guidedhelpid="ghid-pmc"><div class="Io-xj-Bn" style="opacity: 0.5; display: none;"><div class="Io-xj-Bn Io-bq"></div></div><div id="docs-aria-speakable" class="Io-Cq" aria-live="assertive" role="region" aria-atomic="true"></div><div class="Io-Mp-Np Io-Sh-Np"><div class="Io-Mp-hc Io-Sh-aj" style="height: 20px;"><div id="picker:ht" class="Io-Sh-tc" role="heading" aria-level="1">Pick a folder</div><div class="Io-Sh-db"><div role="button" class="a-b-c d-u d-u-R" tabindex="0" style="-moz-user-select: none;" data-tooltip="Close" aria-label="Close"><div class="Io-lr-db-Xh"></div></div></div></div><div class="Io-Mp-eb Io-Sh-eb" style="top: 54px;"><div class="Io-Mp-Np Io-Lp-Zb-Np"><div class="Io-Mp-hc Io-Lp-Zb-aj" style="height: 50px;"><div class="Io-Lp-Zb-Xh-Yb-Mn" id=":3"><div class="a-Xh-Yb a-Xh-Yb-Zb a-Xh-Yb-hc" style="-moz-user-select: none;" role="tablist" tabindex="0"><div class="a-Xh" role="tab" style="-moz-user-select: none;" aria-selected="false" id=":5"><div class="Io-Lp-Zb-Vq">Folders</div></div><div class="a-Xh a-Xh-w" role="tab" style="-moz-user-select: none;" aria-selected="true" id=":6"><div class="Io-Lp-Zb-Vq">Google Drive</div></div><div class="a-Xh" role="tab" style="-moz-user-select: none;" aria-selected="false" id=":7"><div class="Io-Lp-Zb-Vq">Previously selected</div></div><div class="a-b-c a-kb-u" role="tab" style="-moz-user-select: none; display: none;" aria-hidden="true" aria-expanded="false" aria-haspopup="true" id=":8"><div class="a-b-c a-kb-u-pb-qb"><div class="a-b-c a-kb-u-rb-qb"><div class="a-b-c a-kb-u-mb"><div>More<div class="Io-yq-n-Wq-Xq-hl"></div></div></div><div class="a-b-c a-kb-u-nb">&nbsp;</div></div></div></div></div></div></div><div class="Io-Mp-eb Io-Lp-Zb-eb" style="top: 51px;"><div><div class="Io-Mp-Np Io-Op-Np" style="top: -10000px; left: -10000px; right: 9500px; display: none;"><div class="Io-Mp-eb Io-Op-eb" style="bottom: 70px;"><div class="Io-rl-Vi-Rl jj-bj-td Ym-Zm jj-bj-Qb" style="display: none;"><div class="Io-ob"><div class="Io-Jq"><div class="Io-Jq-Qc"><input class="Io-Jq-Qc-qb d-Rb" aria-label="Search terms" aria-describedby=":j" autocomplete="off" aria-autocomplete="list" aria-haspopup="true" style="width: 362px; padding-left: 56px;" type="text"><div id=":j" class="Io-ws-xs" aria-label="Filter by Folders on"><div class="Io-ws-xs-y">Folders</div></div><div role="button" class="a-b-c d-u d-u-Q" tabindex="0" style="-moz-user-select: none;" data-tooltip="Search" aria-label="Search"><img src="picker_data/search-black.png" style="width: 21px; height: 21px;" class="d-u-x"></div></div></div><div class="Io-Yp Io-Yp-Zb Io-Vi-Rl-Wm Io-Vi-Rl-Wm-Hj-Vi-Jl" style="-moz-user-select: none;"><div role="button" class="a-b-c d-u d-u-Q d-u-z d-u-W" tabindex="0" value="list" style="-moz-user-select: none;" data-tooltip="List view" aria-label="List view" aria-pressed="false" id=":k"><div class="Io-yq-Ml-Rl Io-Vi-Rl-Wm-u">&nbsp;</div></div><div role="button" class="a-b-c d-u d-u-Q d-u-z d-u-w" value="grid" style="-moz-user-select: none; display: none;" data-tooltip="Grid view" aria-label="Grid view" aria-pressed="true" aria-hidden="true" id=":l"><div class="Io-yq-Ll-Rl Io-Vi-Rl-Wm-u">&nbsp;</div></div></div><div class="a-kb a-kb-dc Io-nb-kb Io-Jl-nb-kb" style="-moz-user-select: none; display: none;" role="menu" aria-haspopup="true"><div class="a-ub a-Cb-w a-Cb" role="menuitemradio" aria-checked="true" style="-moz-user-select: none;" id=":n"><div class="a-ub-eb"><div class="a-ub-T"></div>Last modified</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":o"><div class="a-ub-eb">Last modified by me</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":p"><div class="a-ub-eb">Last opened by me</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":q"><div class="a-ub-eb">Name</div></div></div><div class="a-b-c a-R-kb-u Io-Cs-kb-u" role="button" style="-moz-user-select: none;" data-tooltip="Sort options" aria-label="Sort options" aria-expanded="false" tabindex="0" aria-haspopup="true"><div class="a-b-c a-R-kb-u-mb"><div class="Io-yq-Jl Io-Cs-kb-u-eb"></div></div><div class="a-b-c a-R-kb-u-nb" aria-hidden="true">&nbsp;</div></div></div><div class="Io-eb-Kc"><div class="Io-Dq-yo" role="status" aria-live="assertive" style="display: none;"></div><div class="Vi-fj-bj-Kc Vi-Kj-jk-kk-qb Vi-Ll-Kc" data-target="layout" tabindex="0"><div class="Vi-Fi-Kc Vi-Kj-Gi" role="presentation" tabindex="-1"><div class="Vi-Fi-wk-xk Vi-rj-sj" data-target="selectionArea" role="presentation"><div class="Vi-Fi-eb" role="listbox" aria-multiselectable="true" aria-label="Files and folders grid view."><div id=":t.folder0" class="Vi-en-dn" role="presentation"><div class="Vi-en-dn-Sh" role="presentation"><div class="Vi-en-dn-y" aria-hidden="true">Folders</div></div><div class="Vi-kp-lp " role="presentation"><div class="Vi-kp-mp" aria-hidden="true"><div class="Vi-kp-mp-op"><div class="Vi-kp-qp-op" style="width: 886px; height: 65px;"></div></div><div class="Vi-kp-mp-pp"><div class="Vi-kp-qp-pp" style="width: 884px; height: 63px;"><span class="Vi-kp-mp-np">.</span></div></div></div><div class="Vi-kp-lp-eb " role="presentation"><div id=":u" class="Vi-Ll" role="presentation"><div id=":t.docs.0.1m-uobyrF98G1Gfm7wghcrJgKMpCChIMi" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.1m-uobyrF98G1Gfm7wghcrJgKMpCChIMi" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="work Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="work"><span class="pj-Vk-Oc-tc">work</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div></div></div></div></div></div><div class="Vi-lg-Eo-eb" role="presentation"></div></div></div></div></div></div><div role="status" aria-live="polite"><div class="Io-lq" style="display: none;" aria-label="Loading data"><div class="d-e"><div><div class="d-e-g-h"><div class="d-e-j" style="left: 10px; top: 0px; width: 10px; height: 19px;"><div class="d-e-g" style="background-color: rgb(255, 255, 255); left: -10px; top: 0px;"></div><div class="d-e-g d-e-h" style="background-color: rgb(158, 18, 18); left: 0px; top: 0px; width: 0px;"></div></div><div class="d-e-j" style="left: 0px; top: 0px; width: 10px; height: 19px;"><div class="d-e-g" style="background-color: rgb(250, 36, 36); display: none;"></div><div class="d-e-g d-e-h-k" style="background-color: rgb(255, 255, 255); width: 19px; left: 0px;"></div></div></div></div><div class="d-e-f" style="opacity: 0;"></div></div></div></div></div><div class="Io-Mp-ic Io-Op-aj" style="height: 69px;"><div class="Io-Op-Up-nk"><div><div role="button" class="a-b-c d-u d-u-F Io-tb-hp-enabled" style="-moz-user-select: none;" id="picker:ap:0" guidedhelpid="ghid-psc" aria-disabled="false" tabindex="0">Select</div><div role="button" class="a-b-c d-u d-u-Q" tabindex="0" style="-moz-user-select: none;" id="picker:ap:1">Cancel</div></div></div><div class="Io-Op-gq-Nb" style="display: none;" role="status" aria-live="polite"></div></div></div><div class="Io-Mp-Np Io-Op-Np" style="top: -10000px; left: -10000px; right: 9500px; display: none;"><div class="Io-Mp-eb Io-Op-eb" style="bottom: 70px;"><div class="Io-rl-Vi-Rl jj-bj-td Ym-Zm jj-bj-Qb" style="display: none;"><div class="Io-ob"><div class="Io-Jq"><div class="Io-Jq-Qc"><input class="Io-Jq-Qc-qb d-Rb" aria-label="Search terms" aria-describedby=":15" autocomplete="off" aria-autocomplete="list" aria-haspopup="true" style="width: 362px; padding-left: 56px;" type="text"><div id=":15" class="Io-ws-xs" aria-label="Filter by Folders on"><div class="Io-ws-xs-y">Folders</div></div><div role="button" class="a-b-c d-u d-u-Q" tabindex="0" style="-moz-user-select: none;" data-tooltip="Search" aria-label="Search"><img src="picker_data/search-black.png" style="width: 21px; height: 21px;" class="d-u-x"></div></div></div><div class="Io-Yp Io-Yp-Zb Io-Vi-Rl-Wm Io-Vi-Rl-Wm-Hj-Vi-Jl" style="-moz-user-select: none;"><div role="button" class="a-b-c d-u d-u-Q d-u-z d-u-W" tabindex="0" value="list" style="-moz-user-select: none;" data-tooltip="List view" aria-label="List view" aria-pressed="false" id=":16"><div class="Io-yq-Ml-Rl Io-Vi-Rl-Wm-u">&nbsp;</div></div><div role="button" class="a-b-c d-u d-u-Q d-u-z d-u-w" value="grid" style="-moz-user-select: none; display: none;" data-tooltip="Grid view" aria-label="Grid view" aria-pressed="true" aria-hidden="true" id=":17"><div class="Io-yq-Ll-Rl Io-Vi-Rl-Wm-u">&nbsp;</div></div></div><div class="a-kb a-kb-dc Io-nb-kb Io-Jl-nb-kb" style="-moz-user-select: none; display: none;" role="menu" aria-haspopup="true"><div class="a-ub a-Cb-w a-Cb" role="menuitemradio" aria-checked="true" style="-moz-user-select: none;" id=":19"><div class="a-ub-eb"><div class="a-ub-T"></div>Last modified</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":1a"><div class="a-ub-eb">Last modified by me</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":1b"><div class="a-ub-eb">Last opened by me</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":1c"><div class="a-ub-eb">Name</div></div></div><div class="a-b-c a-R-kb-u Io-Cs-kb-u" role="button" style="-moz-user-select: none;" data-tooltip="Sort options" aria-label="Sort options" aria-expanded="false" tabindex="0" aria-haspopup="true"><div class="a-b-c a-R-kb-u-mb"><div class="Io-yq-Jl Io-Cs-kb-u-eb"></div></div><div class="a-b-c a-R-kb-u-nb" aria-hidden="true">&nbsp;</div></div><div style="display: none;" class="Io-mc-Rs" role="listbox" id=":1k"></div></div><div class="Io-Mp-Np Io-Pq-Np" style="display: none;"><div class="Io-Mp-hc Io-Pq-aj" style="height: 40px;"><table class="Io-Pq-ai" cellspacing="0" cellpadding="0"><tbody><tr><td class="Io-Pq-Qq Io-Pq-Ep-Qq Io-Pq-hd" tabindex="0" aria-label="Switch to folder Folders" role="link">Folders</td><td class="Io-Pq-Rq Io-Pq-In-Rq"><div class="Io-Pq-Sq a-b-c"></div><div class="Io-Pq-triangle2 a-b-c"></div></td><td class="Io-Pq-Tq" aria-label="Selected folder work" tabindex="0">work</td></tr></tbody></table></div><div class="Io-Mp-eb Io-Pq-eb" style="top: 40px;"></div></div><div class="Io-eb-Kc Io-eb-Kc-Hj-Ts"><div class="Io-Dq-yo" role="status" aria-live="assertive" style="display: none;"></div><div class="Vi-fj-bj-Kc Vi-Kj-jk-kk-qb Vi-Ll-Kc" data-target="layout" tabindex="0"><div class="Vi-Fi-Kc Vi-Kj-Gi" role="presentation" tabindex="-1"><div class="Vi-Fi-wk-xk Vi-rj-sj" data-target="selectionArea" role="presentation"><div class="Vi-Fi-eb" role="listbox" aria-multiselectable="true" aria-label="Files and folders grid view."><div id=":1h.folder1" class="Vi-en-dn" role="presentation"><div class="Vi-en-dn-Sh" role="presentation"><div class="Vi-en-dn-y" aria-hidden="true">Folders</div></div><div class="Vi-kp-lp " role="presentation"><div class="Vi-kp-mp" aria-hidden="true"><div class="Vi-kp-mp-op"><div class="Vi-kp-qp-op" style="width: 886px; height: 65px;"></div></div><div class="Vi-kp-mp-pp"><div class="Vi-kp-qp-pp" style="width: 884px; height: 63px;"><span class="Vi-kp-mp-np">.</span></div></div></div><div class="Vi-kp-lp-eb " role="presentation"><div id=":1i" class="Vi-Ll" role="presentation"><div id=":1h.docs.0.1PXmQyCaQe0tuNrJ4PeQgzHcj0EVDh3I0" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.1PXmQyCaQe0tuNrJ4PeQgzHcj0EVDh3I0" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="Online shoping Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="Online shoping"><span class="pj-Vk-Oc-tc">Online shoping</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div></div></div></div></div></div><div class="Vi-lg-Eo-eb" role="presentation"></div></div></div></div></div></div><div role="status" aria-live="polite"><div class="Io-lq" style="display: none;" aria-label="Loading data"><div class="d-e"><div><div class="d-e-g-h"><div class="d-e-j" style="left: 0px; top: 10px; width: 19px; height: 10px;"><div class="d-e-g" style="background-color: rgb(255, 255, 255); left: 0px; top: -10px;"></div><div class="d-e-g d-e-h" style="background-color: rgb(222, 161, 26); left: 0px; top: 0px; height: 0px;"></div></div><div class="d-e-j" style="left: 0px; top: 0px; width: 19px; height: 10px;"><div class="d-e-g" style="background-color: rgb(255, 211, 75); display: none;"></div><div class="d-e-g d-e-h-k" style="background-color: rgb(255, 255, 255); top: 0px; height: 19px;"></div></div></div></div><div class="d-e-f" style="opacity: 0;"></div></div></div></div></div><div class="Io-Mp-ic Io-Op-aj" style="height: 69px;"><div class="Io-Op-Up-nk"><div><div role="button" class="a-b-c d-u d-u-F d-u-D" style="-moz-user-select: none;" id="picker:ap:2" guidedhelpid="ghid-psc" aria-disabled="true">Select</div><div role="button" class="a-b-c d-u d-u-Q" tabindex="0" style="-moz-user-select: none;" id="picker:ap:3">Cancel</div></div></div><div class="Io-Op-gq-Nb" style="display: none;" role="status" aria-live="polite"></div></div></div><div class="Io-Mp-Np Io-Op-Np" style=""><div class="Io-Mp-eb Io-Op-eb" style="bottom: 70px;"><div class="Io-rl-Vi-Rl jj-bj-td Ym-Zm jj-bj-Qb" style=""><div class="Io-ob"><div class="Io-Jq"><div class="Io-Jq-Qc"><input class="Io-Jq-Qc-qb d-Rb" aria-label="Search terms" autocomplete="off" aria-autocomplete="list" aria-haspopup="true" style="width: 410px;" type="text"><div role="button" class="a-b-c d-u d-u-Q" tabindex="0" style="-moz-user-select: none;" data-tooltip="Search" aria-label="Search"><img src="picker_data/search-black.png" style="width: 21px; height: 21px;" class="d-u-x"></div></div></div><div class="Io-Yp Io-Yp-Zb Io-Vi-Rl-Wm Io-Vi-Rl-Wm-Hj-Vi-Jl" style="-moz-user-select: none;"><div role="button" class="a-b-c d-u d-u-Q d-u-z d-u-W" tabindex="0" value="list" style="-moz-user-select: none;" data-tooltip="List view" aria-label="List view" aria-pressed="false" id=":1t"><div class="Io-yq-Ml-Rl Io-Vi-Rl-Wm-u">&nbsp;</div></div><div role="button" class="a-b-c d-u d-u-Q d-u-z d-u-w" value="grid" style="-moz-user-select: none; display: none;" data-tooltip="Grid view" aria-label="Grid view" aria-pressed="true" aria-hidden="true" id=":1u"><div class="Io-yq-Ll-Rl Io-Vi-Rl-Wm-u">&nbsp;</div></div></div><div class="a-kb a-kb-dc Io-nb-kb Io-Jl-nb-kb" style="-moz-user-select: none; display: none;" role="menu" aria-haspopup="true"><div class="a-ub a-Cb-w a-Cb" role="menuitemradio" aria-checked="true" style="-moz-user-select: none;" id=":1w"><div class="a-ub-eb"><div class="a-ub-T"></div>Last modified</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":1x"><div class="a-ub-eb">Last modified by me</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":1y"><div class="a-ub-eb">Last opened by me</div></div><div class="a-ub" role="menuitem" style="-moz-user-select: none;" id=":1z"><div class="a-ub-eb">Name</div></div></div><div class="a-b-c a-R-kb-u Io-Cs-kb-u" role="button" style="-moz-user-select: none;" data-tooltip="Sort options" aria-label="Sort options" aria-expanded="false" tabindex="0" aria-haspopup="true"><div class="a-b-c a-R-kb-u-mb"><div class="Io-yq-Jl Io-Cs-kb-u-eb"></div></div><div class="a-b-c a-R-kb-u-nb" aria-hidden="true">&nbsp;</div></div></div><div class="Io-eb-Kc"><div class="Io-Dq-yo" role="status" aria-live="assertive" style="display: none;"></div><div class="Vi-fj-bj-Kc Vi-Kj-jk-kk-qb Vi-Ll-Kc" data-target="layout" tabindex="0"><div class="Vi-Fi-Kc Vi-Kj-Gi" role="presentation" tabindex="-1"><div class="Vi-Fi-wk-xk Vi-rj-sj" data-target="selectionArea" role="presentation"><div class="Vi-Fi-eb" role="listbox" aria-multiselectable="true" aria-label="Files and folders grid view."><div id=":24.folder2" class="Vi-en-dn" role="presentation"><div class="Vi-en-dn-Sh" role="presentation"><div class="Vi-en-dn-y" aria-hidden="true">Folders</div></div><div class="Vi-kp-lp " role="presentation"><div class="Vi-kp-mp" aria-hidden="true"><div class="Vi-kp-mp-op"><div class="Vi-kp-qp-op" style="width: 886px; height: 65px;"></div></div><div class="Vi-kp-mp-pp"><div class="Vi-kp-qp-pp" style="width: 884px; height: 63px;"><span class="Vi-kp-mp-np">.</span></div></div></div><div class="Vi-kp-lp-eb " role="presentation"><div id=":25" class="Vi-Ll" role="presentation"><div id=":24.docs.0.1PXmQyCaQe0tuNrJ4PeQgzHcj0EVDh3I0" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.1PXmQyCaQe0tuNrJ4PeQgzHcj0EVDh3I0" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="Online shoping Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="Online shoping"><span class="pj-Vk-Oc-tc">Online shoping</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div><div id=":24.docs.0.1m-uobyrF98G1Gfm7wghcrJgKMpCChIMi" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.1m-uobyrF98G1Gfm7wghcrJgKMpCChIMi" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="work Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="work"><span class="pj-Vk-Oc-tc">work</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div><div id=":24.docs.0.0B56Bu_Sf3yz7czBXZWJ1bHJEYWM" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.0B56Bu_Sf3yz7czBXZWJ1bHJEYWM" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="farewell Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="farewell"><span class="pj-Vk-Oc-tc">farewell</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div><div id=":24.docs.0.0BxIaw5cJbA0Fa1RLdjc4ZTU3Y2s" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.0BxIaw5cJbA0Fa1RLdjc4ZTU3Y2s" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="Wtp farewell Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="Wtp farewell"><span class="pj-Vk-Oc-tc">Wtp farewell</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div><div id=":24.docs.0.0B-y5lz1IkPSTOEl3Q3lDUEhLSGs" class="Vi-Ll-On-Kc Vi-rj-sj" role="option" tabindex="-1" style="margin-top:16px;margin-right:16px" data-target="doc" data-is-doc-name="true" draggable="true" data-id="docs.0.0B-y5lz1IkPSTOEl3Q3lDUEhLSGs" aria-disabled="false" aria-selected="false"><div class="Vi-Ll-On-Lj-I-ao"></div><div data-target="itemUploadDrop" class="pj-Ll-On pj-Ll-mj" aria-label="Creation Cell Ren 17 Shared Google Drive Folder"><div class="pj-ii-l-ed"></div><div class="pj-Ll-mj-f-Kc Vi-f-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-mj-f"><div class="pj-mj-f-Ij" aria-label="Shared Google Drive Folder"><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#8f8f8f"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div><div class="pj-Ll-mj-f-Rn"><div class="pj-mj-f-Ij" aria-label=""><svg x="0px" y="0px" height="24px" width="24px" focusable="false" viewBox="0 0 24 24" fill="#ffffff"><g><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-5 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm4 8h-8v-1c0-1.33 2.67-2 4-2s4 .67 4 2v1z"></path><path d="M0 0h24v24H0z" fill="none"></path></g></svg></div></div></div><div class="pj-Ll-mj-cb-Kc"><div class="Vi-wk-Ij-pn"><svg height="100%" width="100%" viewBox="0 0 10 10" preserveAspectRatio="none" focusable="false"><rect width="10" height="10"></rect></svg></div><div class="pj-Ll-cb" aria-label="Creation Cell Ren 17"><span class="pj-Vk-Oc-tc">Creation Cell Ren 17</span></div></div><div class="pj-Ll-mj-bj-H"></div></div></div></div></div></div></div></div><div class="Vi-lg-Eo-eb" role="presentation"></div></div></div></div></div></div><div role="status" aria-live="polite"><div class="Io-lq" style="display: none;" aria-label="Loading data"><div class="d-e"><div><div class="d-e-g-h"><div class="d-e-j" style="left: 0px; top: 0px; width: 10px; height: 19px;"><div class="d-e-g" style="background-color: rgb(255, 255, 255); left: 0px; top: 0px;"></div><div class="d-e-g d-e-h" style="background-color: rgb(0, 137, 72); left: 10px; top: 0px; width: 0px;"></div></div><div class="d-e-j" style="left: 10px; top: 0px; width: 10px; height: 19px;"><div class="d-e-g" style="background-color: rgb(0, 177, 95); left: -10px; display: none;"></div><div class="d-e-g d-e-h-k" style="background-color: rgb(255, 255, 255); width: 19px; left: -10px;"></div></div></div></div><div class="d-e-f" style="opacity: 0;"></div></div></div></div></div><div class="Io-Mp-ic Io-Op-aj" style="height: 69px;"><div class="Io-Op-Up-nk"><div><div role="button" class="a-b-c d-u d-u-F d-u-D" style="-moz-user-select: none;" id="picker:ap:4" guidedhelpid="ghid-psc" aria-disabled="true">Select</div><div role="button" class="a-b-c d-u d-u-Q" tabindex="0" style="-moz-user-select: none;" id="picker:ap:5">Cancel</div></div></div><div class="Io-Op-gq-Nb" style="display: none;" role="status" aria-live="polite"></div></div></div></div></div></div></div></div></div></div>
+<script type="text/javascript" src="picker_data/1850785492-picker_modularized_opc.js">
+          
+        </script>
+<script type="text/javascript">
+        var pickerApp;
+
+        
+        var moduleDeps = {opc:[],opd:['opc'],opdr:['opc'],opl:['opc'],opm:['opc'],opmd:['opc'],opp:['opc'],oppe:['opc'],opr:['opc'],opu:['opc'],opv:['opc'],oppu:['opp','opu']};
+        var moduleUris = {opr:['https://docs.google.com/picker/static/resources/client/js/1977364058-picker_modularized_opr.js'],opd:['https://docs.google.com/picker/static/resources/client/js/2036726029-picker_modularized_opd.js'],oppe:['https://docs.google.com/picker/static/resources/client/js/2160323077-picker_modularized_oppe.js'],oppu:['https://docs.google.com/picker/static/resources/client/js/4134549174-picker_modularized_oppu.js'],opc:['https://docs.google.com/picker/static/resources/client/js/1850785492-picker_modularized_opc.js'],opv:['https://docs.google.com/picker/static/resources/client/js/3366367097-picker_modularized_opv.js'],opu:['https://docs.google.com/picker/static/resources/client/js/3499117959-picker_modularized_opu.js'],opl:['https://docs.google.com/picker/static/resources/client/js/778193460-picker_modularized_opl.js'],opdr:['https://docs.google.com/picker/static/resources/client/js/1043723431-picker_modularized_opdr.js'],opmd:['https://docs.google.com/picker/static/resources/client/js/1019685884-picker_modularized_opmd.js'],opm:['https://docs.google.com/picker/static/resources/client/js/2799947529-picker_modularized_opm.js'],opp:['https://docs.google.com/picker/static/resources/client/js/3226364587-picker_modularized_opp.js']};
+        
+        initModules(
+            moduleDeps,
+            moduleUris,
+            false,
+            "opc");
+        
+        if (true
+            && window.jstiming
+            && window.jstiming.load
+            && window.jstiming.load.tick) {
+          window.jstiming.load.tick('opc');
+          window.jstiming.sn = "apps_picker";
+        }
+
+        function init() {
+          
+          rawConfig['element'] = document.getElementById('doclist');
+          rawConfig['loadingStatusElement'] = document.body;
+          pickerApp = _createPicker(rawConfig);
+
+          
+          pickerApp.initializeFromServer(rawConfig);
+        };
+
+        function dispose() {
+          if (pickerApp) {
+            pickerApp.dispose();
+            pickerApp = null;
+          }
+        };
+      </script><script src="picker_data/rpc.js" type="text/javascript"></script><div style="position: absolute; top: -1000px; height: 1px; overflow: hidden;" aria-live="assertive" aria-atomic="true">Pick a folder</div></body></html>
